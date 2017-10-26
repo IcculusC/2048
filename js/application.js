@@ -1,4 +1,8 @@
 // Wait till the browser is ready to render the game (avoids glitches)
-window.requestAnimationFrame(function () {
-  new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
-});
+function load() {
+  window.requestAnimationFrame(function () {
+    new window.GameManager(4, window.KeyboardInputManager, window.HTMLActuator, window.LocalStorageManager);
+  });
+}
+
+export default load;
